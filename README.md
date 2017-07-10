@@ -48,7 +48,7 @@ I used 3 features to do the training and classification
     ```
 - **HOG features**
   - HOG features is the main set of features. we can use just the HOG features to do the classification.
-  -  Spatial binning and Color histograms cannot be used independently but can add to the robustness of the classification when used along with HOG features.
+  -  Spatial binning and Color histograms are not useful to be used independently but can add to the robustness of the classification when used along with HOG features.
   - I have calculated the HOG features on all the 3 channels. After testing on a wide range of values for the orientations , pixels per cell & cells per block, I settled for 12 orientations , 8 pixels per cell and 1 cell per block. These gave me the good accuracy.
   - I observed that increasing the pixels per cell results in lower testing accuracy since a lot of information is lost as the pixels per cell increase.
     ```python
@@ -60,12 +60,15 @@ I used 3 features to do the training and classification
         return [f0,f1,f2]
     ```
 **Spatial Binning**
+
 ![alt text](output_images/spatial_output.png)
 
 **Histogram of colors**
+
 ![alt text](output_images/hist_output.png)
 
 **HOG Features**
+
 ![alt text](output_images/hog_output.png)
 
 
