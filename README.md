@@ -129,19 +129,14 @@ Each pixel in the heatmap holds the number of windows with identified cars which
 
 After this the scypi label() method is used to label the connected pixels. The bounding box coordinates for each hot area are calculated and a rectangle is drawn.
 **Heatmap**
-![IMAGE ALT TEXT HERE](output_images/heatmap.png)
+![IMAGE ALT TEXT HERE](output_images/heatmap_car.png)
 ```python
 #car_detector.py
 def create_heatmap(cls):
     #iterates over the detected hot windows
     #creates a heatmap
     #Also uses the heatmaps of the past 10 frames to average the heatmaps
-```
-**Cars identified from Heatmap**
-![IMAGE ALT TEXT HERE](output_images/heatmap-rect.png)
 
-```python
-# car_detector.py
 def draw_cars(cls):
     #Uses the heatmap of the current frame.
     #Scipy's label() method is used
